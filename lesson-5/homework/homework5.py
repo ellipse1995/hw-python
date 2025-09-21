@@ -2,11 +2,8 @@
 
 def leap_year(year):
     
-    if year%4 == 0 and (year%100 != 0 or year%400==0):
-        print ('Это высокосный год')
-    else: 
-        print('Это не высокосный год')
-
+    return year%4 == 0 and (year%100 != 0 or year%400==0)
+        
 
 n = int(input())
 
@@ -21,7 +18,7 @@ elif n % 2 == 0 and n > 20:
 #solution 2
 a = int(input("Введите первое число"))
 b = int(input("Введите второе число"))
-
-evens = list(x for x in range (a,b+1) if not x%2)
+start = a+ (a%2)
+evens = list(range (start,b+1,2))
 
 print (evens)
